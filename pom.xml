@@ -26,11 +26,11 @@
       <version>${javafx.version}</version>
     </dependency>
 
-    <!-- Jakarta Mail (for sending email) -->
+    <!-- Jakarta Mail (for sending email) - corrected coordinates -->
     <dependency>
-      <groupId>com.sun.mail</groupId>
-      <artifactId>jakarta.mail</artifactId>
-      <version>2.1.1</version>
+      <groupId>jakarta.mail</groupId>
+      <artifactId>jakarta.mail-api</artifactId>
+      <version>2.1.5</version>
     </dependency>
 
     <!-- JSON / HTTP (for optional AI API integration) -->
