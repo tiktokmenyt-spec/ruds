@@ -1,0 +1,46 @@
+.root-pane {
+    -fx-background-color: linear-gradient(#0b0f15, #0f141a);
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-text-fill: #e6eef8;
+}
+.sidebar {
+    -fx-padding: 16;
+    -fx-background-color: linear-gradient(#0f141a, #0b0f15);
+    -fx-border-color: transparent;
+}
+.app-title {
+    -fx-text-fill: #95b8ff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+.section-title {
+    -fx-text-fill: #cde0ff;
+    -fx-font-size: 14px;
+}
+.chat-pane {
+    -fx-background-color: linear-gradient(#0c1116, #081019);
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+}
+.chat-title {
+    -fx-text-fill: #cfe3ff;
+    -fx-font-size: 16px;
+}
+.button {
+    -fx-background-radius: 8;
+}
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #d9e6ff;
+}
+.message-in {
+    -fx-background-color: rgba(255,255,255,0.04);
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 8;
+}
+.message-out {
+    -fx-background-color: linear-gradient(#6b8cff, #5b62ff);
+    -fx-text-fill: white;
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 8;
+}

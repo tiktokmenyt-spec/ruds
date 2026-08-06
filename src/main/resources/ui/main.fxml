@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<BorderPane xmlns="http://javafx.com/javafx/20" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.rusmessanger.ui.MainController" styleClass="root-pane">
+  <!-- Left sidebar -->
+  <left>
+    <VBox spacing="12" styleClass="sidebar" prefWidth="260" alignment="TOP_CENTER">
+      <Label text="RUS MESSANGER" styleClass="app-title"/>
+      <TextField fx:id="searchField" promptText="Поиск по нику или email" />
+      <Button text="Новый контакт" onAction="#onAddContact"/>
+      <Button text="Создать группу / канал" onAction="#onCreateGroup"/>
+      <ListView fx:id="contactsList" VBox.vgrow="ALWAYS" />
+      <HBox spacing="8">
+        <Button text="Избранное" onAction="#onFavorites"/>
+        <Button text="Звонки" onAction="#onCalls"/>
+      </HBox>
+    </VBox>
+  </left>
+
+  <!-- Center: chat list -->
+  <center>
+    <VBox spacing="8" padding="10">
+      <Label text="Чаты" styleClass="section-title"/>
+      <ListView fx:id="chatsList" prefHeight="250" />
+    </VBox>
+  </center>
+
+  <!-- Right: conversation & assistant -->
+  <right>
+    <VBox spacing="8" prefWidth="480" padding="12" styleClass="chat-pane">
+      <HBox spacing="8" alignment="CENTER_RIGHT">
+        <Label fx:id="currentChatName" text="Выберите чат" styleClass="chat-title"/>
+        <Button text="Настройки" onAction="#onSettings"/>
+      </HBox>
+
+      <ScrollPane fx:id="messagesScroll" fitToWidth="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="messagesBox" spacing="10" padding="10"/>
+      </ScrollPane>
+
+      <HBox spacing="8" alignment="CENTER_LEFT">
+        <TextField fx:id="messageField" promptText="Напишите сообщение..." HBox.hgrow="ALWAYS"/>
+        <Button text="Отправить" onAction="#onSendMessage"/>
+      </HBox>
+
+      <HBox spacing="8" alignment="CENTER_LEFT">
+        <Button text="ИИ Помощник" onAction="#onOpenAssistant"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="statusLabel" text="Готово" />
+      </HBox>
+    </VBox>
+  </right>
+</BorderPane>
